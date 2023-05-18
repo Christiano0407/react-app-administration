@@ -8,7 +8,7 @@ import './App.css';
 function App() {
   return (
     <>
-      <main>
+      <main className="w-full p-2 ">
         <Header />
         <Transaction />
         <Balance />

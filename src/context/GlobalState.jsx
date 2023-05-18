@@ -1,6 +1,11 @@
 //** =================== === Context Global === ========================= */
-import { createContext, useContext } from 'react';
+import { createContext, useContext, useState, useReducer } from 'react';
+import { reducer } from './appReducer';
 
+//** === */
+const initialState = {
+  transaction: [],
+};
 export const context = createContext();
 
 export const useGlobalState = () => {
@@ -9,5 +14,16 @@ export const useGlobalState = () => {
 };
 
 export const GlobalProvider = ({ children }) => {
-  return <context.Provider value={{ total: 10 }}>{children}</context.Provider>;
+  //const [state, setState] = useState([]);
+  const [state, dispatch] = useReducer(reducer, initialState);
+
+  return (
+    <context.Provider
+      value={{
+        transaction: state.transaction,
+      }}
+    >
+      {children}
+    </context.Provider>
+  );
 };
