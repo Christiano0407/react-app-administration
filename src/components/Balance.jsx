@@ -6,9 +6,9 @@ export const Balance = () => {
 
   return (
     <>
-      <div>
-        <h1>Balance</h1>
-        <span>{JSON.stringify(data)}</span>
+      <div className="w-full ">
+        <h1 className="text-[20px] font-bold text-black">Balance</h1>
+        <span className="text-[16px] font-normal">{JSON.stringify(data)}</span>
       </div>
     </>
   );
