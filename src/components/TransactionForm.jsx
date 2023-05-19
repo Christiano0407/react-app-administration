@@ -1,13 +1,21 @@
 //**! ============================= Component Transaction Form */
 import { useState } from 'react';
+import { useGlobalState } from '../context/GlobalState';
 
 export const Transaction = () => {
+  const { addTransaction } = useGlobalState();
+
   const [description, setDescription] = useState();
 
   const [amount, setAmount] = useState(0);
 
   const onSubmit = (e) => {
     e.preventDefault();
+    addTransaction({
+      id: 1,
+      description,
+      amount,
+    });
   };
 
   return (

@@ -17,10 +17,19 @@ export const GlobalProvider = ({ children }) => {
   //const [state, setState] = useState([]);
   const [state, dispatch] = useReducer(reducer, initialState);
 
+  const addTransaction = (transition) => {
+    console.log('Add New Transaction');
+    dispatch({
+      type: 'ADD_TRANSACTION',
+      payload: transition,
+    });
+  };
+
   return (
     <context.Provider
       value={{
         transaction: state.transaction,
+        addTransaction,
       }}
     >
       {children}
