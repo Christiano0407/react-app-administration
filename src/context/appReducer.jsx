@@ -7,6 +7,13 @@ export function reducer(state, action) {
         ...state,
         transaction: [...state.transaction, action.payload],
       };
+    case 'DELETE_TRANSACTION':
+      return {
+        ...state,
+        transaction: state.transaction.filter(
+          (transaction) => transaction.id !== action.payload
+        ),
+      };
     default:
       return state;
   }
