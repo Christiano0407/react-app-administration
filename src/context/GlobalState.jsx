@@ -1,5 +1,11 @@
 //** =================== === Context Global === ========================= */
-import { createContext, useContext, useState, useReducer } from 'react';
+import {
+  createContext,
+  useContext,
+  useState,
+  useReducer,
+  useEffect,
+} from 'react';
 import { reducer } from './appReducer';
 
 //** === */
@@ -15,7 +21,14 @@ export const useGlobalState = () => {
 
 export const GlobalProvider = ({ children }) => {
   //const [state, setState] = useState([]);
-  const [state, dispatch] = useReducer(reducer, initialState);
+  const [state, dispatch] = useReducer(reducer, initialState, () => {
+    const localData = localStorage.getItem(`transaction`);
+    return localData ? JSON.parse(localData) : initialState;
+  });
+
+  useEffect(() => {
+    localStorage.setItem(`transaction`, JSON.stringify(state));
+  }, [state]);
 
   const addTransaction = (transition) => {
     console.log('Add New Transaction');
