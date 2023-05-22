@@ -10,12 +10,16 @@ import './App.css';
 function App() {
   return (
     <>
-      <main className="w-full p-2 ">
-        <Header />
-        <IncomeExpenses />
-        <Transaction />
-        <TransactionList />
-        <Balance />
+      <main className="w-full h-full bg-zinc-800 text-white p-[10px] grid grid-cols-2 grid-flow-row gap-4">
+        <section className="bg-zinc-800 p-10  flex flex-col col-start-1 col-end-2">
+          <Header />
+          <IncomeExpenses />
+          <Transaction />
+        </section>
+        <section className="col-start-2 col-end-4 bg-zinc-800 p-10 flex flex-col">
+          <TransactionList />
+          <Balance />
+        </section>
       </main>
     </>
   );

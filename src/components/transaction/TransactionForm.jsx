@@ -22,19 +22,19 @@ export const Transaction = () => {
     <section className="w-full flex justify-center my-5">
       <form
         onSubmit={onSubmit}
-        className="w-1/2 p-5 m-[20px, auto] flex justify-center items-center flex-col border-4 border-sky-950"
+        className="w-full p-[20px] m-[20px, auto] flex justify-center items-center flex-col border-4 border-white rounded-lg"
       >
         <input
           type="text"
           placeholder="Enter your description"
-          className="p-3 text-lg text-black font-semibold w-1/2 my-3"
+          className="p-[15px] text-lg bg-zinc-600 text-white font-semibold w-full my-3 rounded-lg"
           onChange={(e) => setDescription(e.target.value)}
         />
         <input
           type="number"
           step="0.01"
           placeholder="00:00"
-          className="p-3 w-1/2 my-3 text-lg text-black "
+          className="p-[10px] text-lg bg-zinc-600 text-white font-semibold w-full my-3 rounded-lg mb-[10px]"
           onChange={(e) => setAmount(e.target.value)}
         />
         <button className="p-4 bg-zinc-900 text-white font-medium text-base my-2 rounded-md">

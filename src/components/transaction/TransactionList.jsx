@@ -5,7 +5,8 @@ export function TransactionList(children) {
   const { transaction, deleteTransaction } = useGlobalState();
 
   return (
-    <div className="w-full p-[10px] my-6 grid grid-cols-3 grid-rows-2 gap-5 ">
+    <>
+      <h3>History Pay</h3>
       {transaction.map((transaction) => (
         <div
           key={children.id}
@@ -25,6 +26,6 @@ export function TransactionList(children) {
           </button>
         </div>
       ))}
-    </div>
+    </>
   );
 }
