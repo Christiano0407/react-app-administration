@@ -22,11 +22,11 @@ export default function IncomeExpenses() {
         className="p-[10px] sm:text-center md:text-start"
       >
         <h2 className="font-bold mb-2 sm:text-3xl md:text-2xl">Income</h2>
-        <span className="font-semibold text-lg">${income}</span>
+        <span className="font-semibold text-lg">${expense}</span>
       </div>
       <div className="p-[10px] sm:text-center md:text-start">
         <h2 className="font-bold mb-2 sm:text-3xl md:text-2xl">Expense</h2>
-        <span className="font-semibold text-lg">${expense}</span>
+        <span className="font-semibold text-lg">${income}</span>
       </div>
     </section>
   );

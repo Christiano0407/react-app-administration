@@ -6,7 +6,7 @@ export const Balance = () => {
 
   const amounts = transaction.map((transaction) => transaction.amount);
 
-  const totalPay = amounts.reduce((acc, total) => (acc += total), 0);
+  const totalPay = amounts.reduce((acc, total) => (acc += total), 0).toFixed(2);
 
   return (
     <>
@@ -18,7 +18,7 @@ export const Balance = () => {
           Amount: {JSON.stringify(amounts)}
         </span>
         <span className="text-[16px] font-semibold sm:text-center md:text-start">
-          Total Pay: ${JSON.stringify(totalPay)}
+          Total Pay: {totalPay}
         </span>
       </div>
     </>
