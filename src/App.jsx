@@ -5,6 +5,7 @@ import IncomeExpenses from './components/IncomeExpenses';
 import { Transaction } from './components/transaction/TransactionForm';
 import { TransactionList } from './components/transaction/TransactionList';
 import { Balance } from './components/Balance';
+import { ExpenseChart } from './components/ExpenseChart';
 import './App.css';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
           <Transaction />
         </section>
         <section className="sm:col-start-1 md:col-start-2 col-end-4 bg-zinc-800 p-10 flex flex-col">
+          <ExpenseChart />
           <TransactionList />
           <Balance />
         </section>
