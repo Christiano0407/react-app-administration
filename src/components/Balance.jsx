@@ -10,13 +10,15 @@ export const Balance = () => {
 
   return (
     <>
-      <div className="w-full flex flex-col">
-        <h1 className="text-[20px] font-bold text-black">Balance Pay</h1>
-        <span className="text-[16px] font-normal">
+      <div className="w-full flex flex-col p-[10px] mx-auto my-5">
+        <h1 className="text-[24px] font-bold text-white text-center mb-3 ">
+          Balance Pay
+        </h1>
+        <span className="text-[16px] font-semibold mb-2 sm:text-center md:text-start">
           Amount: {JSON.stringify(amounts)}
         </span>
-        <span className="text-[16px] font-normal">
-          ${JSON.stringify(totalPay)}
+        <span className="text-[16px] font-semibold sm:text-center md:text-start">
+          Total Pay: ${JSON.stringify(totalPay)}
         </span>
       </div>
     </>

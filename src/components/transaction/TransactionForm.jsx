@@ -37,8 +37,8 @@ export const Transaction = () => {
           className="p-[10px] text-lg bg-zinc-600 text-white font-semibold w-full my-3 rounded-lg mb-[10px]"
           onChange={(e) => setAmount(e.target.value)}
         />
-        <button className="p-4 bg-zinc-900 text-white font-medium text-base my-2 rounded-md">
-          Add Transaction
+        <button className="p-[10px] bg-zinc-900 text-white font-semibold text-[16px] my-2 rounded-lg ">
+          Transaction
         </button>
       </form>
     </section>
